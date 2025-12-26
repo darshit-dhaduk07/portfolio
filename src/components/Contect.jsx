@@ -1,46 +1,51 @@
 function Contact() {
   return (
     <section id="contact" className="py-24 border-t border-[var(--border)]">
-      <h2 className="text-2xl font-semibold mb-8">Contact</h2>
+      <h2 className="text-3xl font-semibold mb-6">Get In Touch</h2>
 
-      <div className="max-w-3xl space-y-4 text-[var(--text-secondary)]">
-        <p>
+      <div className="max-w-3xl space-y-6 text-[var(--text-secondary)]">
+        <p className="leading-relaxed">
           I’m currently open to learning opportunities, internships, and
           collaboration on interesting projects.
         </p>
 
-        <div className="space-y-2 text-sm">
-          <p>
-            Email:{" "}
+        <div className="space-y-3 text-sm">
+          {/* Email */}
+          <div>
+            <span className="text-[var(--text-muted)]">Email:</span>{" "}
             <a
               href="mailto:darshitdhaduk129@gmail.com"
-              className="underline underline-offset-4 hover:text-[var(--text-primary)]"
+              className="underline underline-offset-4 hover:text-[var(--text-primary)] transition"
             >
               darshitdhaduk129@gmail.com
             </a>
-          </p>
+          </div>
 
-          <p>
-            GitHub:{" "}
+          {/* GitHub */}
+          <div>
+            <span className="text-[var(--text-muted)]">GitHub:</span>{" "}
             <a
               href="https://github.com/darshit-dhaduk07"
               target="_blank"
-              className="underline underline-offset-4 hover:text-[var(--text-primary)]"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 hover:text-[var(--text-primary)] transition"
             >
-              https://github.com/darshit-dhaduk07
+              darshit-dhaduk07
             </a>
-          </p>
+          </div>
 
-          <p>
-            LinkedIn:{" "}
+          {/* LinkedIn */}
+          <div>
+            <span className="text-[var(--text-muted)]">LinkedIn:</span>{" "}
             <a
               href="https://www.linkedin.com/in/darshitdhaduk7/"
               target="_blank"
-              className="underline underline-offset-4 hover:text-[var(--text-primary)]"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 hover:text-[var(--text-primary)] transition"
             >
-              https://www.linkedin.com/in/darshitdhaduk7/
+              darshitdhaduk7
             </a>
-          </p>
+          </div>
         </div>
       </div>
     </section>

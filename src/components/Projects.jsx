@@ -1,274 +1,61 @@
 function Projects() {
   return (
-    <section id="projects" className="py-24 border-t border-[var(--border)]">
-      <h2 className="text-2xl font-semibold mb-10">Projects</h2>
+    <section id="projects" className="py-20">
+      <h2 className="text-3xl font-semibold mb-10">Projects</h2>
 
-      <div className="space-y-8">
-        {/* Project 1 */}
-        <div className="border border-[var(--border)] rounded-lg p-6">
-          <h3 className="text-lg font-medium">Inventory Management System</h3>
+      <div className="grid md:grid-cols-2 gap-6">
+        {[
+          {
+            title: "Portfolio Website",
+            desc: "Personal portfolio to showcase projects, skills, and contact information.",
+            tech: ["React", "Tailwind CSS", "Vite"],
+            live: "#",
+            github: "#",
+          },
+          {
+            title: "Full Stack CRUD App",
+            desc: "A full-stack application with authentication and CRUD operations.",
+            tech: ["React", "Node.js", "Express", "MongoDB"],
+            live: "#",
+            github: "#",
+          },
+        ].map((project) => (
+          <div
+            key={project.title}
+            className="bg-zinc-900 border flex flex-col h-full border-zinc-800 rounded-xl p-6 hover:border-zinc-600 transition"
+          >
+            <h3 className="text-xl font-medium mb-2">{project.title}</h3>
+            <p className="text-zinc-400 text-sm mb-4">{project.desc}</p>
 
-          <p className="text-[var(--text-secondary)] mt-2 max-w-2xl">
-            A full-stack application to manage products, stock levels, and
-            orders, designed to replace manual inventory tracking.
-          </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {project.tech.map((t) => (
+                <span
+                  key={t}
+                  className="text-xs px-2 py-1 rounded-full bg-zinc-800 text-zinc-300"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
 
-          <div className="flex flex-wrap gap-2 mt-4">
-            <span
-              className="
-  px-2 py-1 text-xs
-  text-[var(--text-secondary)]
-  border border-[var(--border)]
-  rounded
-  transition
-  hover:text-[var(--text-primary)]
-  hover:border-[var(--accent)]
-  hover:shadow-[0_0_8px_rgba(255,255,255,0.15)]
-"
-            >
-              React
-            </span>
-            <span
-              className="
-  px-2 py-1 text-xs
-  text-[var(--text-secondary)]
-  border border-[var(--border)]
-  rounded
-  transition
-  hover:text-[var(--text-primary)]
-  hover:border-[var(--accent)]
-  hover:shadow-[0_0_8px_rgba(255,255,255,0.15)]
-"
-            >
-              Node.js
-            </span>
-            <span
-              className="
-  px-2 py-1 text-xs
-  text-[var(--text-secondary)]
-  border border-[var(--border)]
-  rounded
-  transition
-  hover:text-[var(--text-primary)]
-  hover:border-[var(--accent)]
-  hover:shadow-[0_0_8px_rgba(255,255,255,0.15)]
-"
-            >
-              Express
-            </span>
-            <span
-              className="
-  px-2 py-1 text-xs
-  text-[var(--text-secondary)]
-  border border-[var(--border)]
-  rounded
-  transition
-  hover:text-[var(--text-primary)]
-  hover:border-[var(--accent)]
-  hover:shadow-[0_0_8px_rgba(255,255,255,0.15)]
-"
-            >
-              MongoDB
-            </span>
-            <span
-              className="
-  px-2 py-1 text-xs
-  text-[var(--text-secondary)]
-  border border-[var(--border)]
-  rounded
-  transition
-  hover:text-[var(--text-primary)]
-  hover:border-[var(--accent)]
-  hover:shadow-[0_0_8px_rgba(255,255,255,0.15)]
-"
-            >
-              Tailwind CSS
-            </span>
+            <div className="mt-auto flex gap-4 text-sm ">
+              <a
+                href="#"
+                className="text-white hover:underline"
+                target="_blank"
+              >
+                Live
+              </a>
+              <a
+                href="#"
+                className="text-zinc-400 hover:text-white"
+                target="_blank"
+              >
+                GitHub
+              </a>
+            </div>
           </div>
-
-          <div className="flex gap-4 mt-4 text-sm">
-            <a
-              href="#"
-              className="underline underline-offset-4 hover:text-[var(--accent)]"
-            >
-              GitHub
-            </a>
-            <a
-              href="#"
-              className="underline underline-offset-4 hover:text-[var(--accent)]"
-            >
-              Live Demo
-            </a>
-          </div>
-        </div>
-
-        {/* Project 2 */}
-        <div className="border border-[var(--border)] rounded-lg p-6">
-          <h3 className="text-lg font-medium">Brain / Notes Application</h3>
-
-          <p className="text-[var(--text-secondary)] mt-2 max-w-2xl">
-            A personal knowledge management app that allows users to save,
-            organize, and search notes securely.
-          </p>
-
-          <div className="flex flex-wrap gap-2 mt-4">
-            <span
-              className="
-  px-2 py-1 text-xs
-  text-[var(--text-secondary)]
-  border border-[var(--border)]
-  rounded
-  transition
-  hover:text-[var(--text-primary)]
-  hover:border-[var(--accent)]
-  hover:shadow-[0_0_8px_rgba(255,255,255,0.15)]
-"
-            >
-              React
-            </span>
-            <span
-              className="
-  px-2 py-1 text-xs
-  text-[var(--text-secondary)]
-  border border-[var(--border)]
-  rounded
-  transition
-  hover:text-[var(--text-primary)]
-  hover:border-[var(--accent)]
-  hover:shadow-[0_0_8px_rgba(255,255,255,0.15)]
-"
-            >
-              Node.js
-            </span>
-            <span
-              className="
-  px-2 py-1 text-xs
-  text-[var(--text-secondary)]
-  border border-[var(--border)]
-  rounded
-  transition
-  hover:text-[var(--text-primary)]
-  hover:border-[var(--accent)]
-  hover:shadow-[0_0_8px_rgba(255,255,255,0.15)]
-"
-            >
-              MongoDB
-            </span>
-            <span
-              className="
-            px-2 py-1 text-xs
-            text-[var(--text-secondary)]
-            border border-[var(--border)]
-            rounded
-            transition
-            hover:text-[var(--text-primary)]
-            hover:border-[var(--accent)]
-            hover:shadow-[0_0_8px_rgba(255,255,255,0.15)]
-"
-            >
-              JWT Authentication
-            </span>
-          </div>
-
-          <div className="flex gap-4 mt-4 text-sm">
-            <a
-              href="#"
-              className="underline underline-offset-4 hover:text-[var(--accent)]"
-            >
-              GitHub
-            </a>
-            <a
-              href="#"
-              className="underline underline-offset-4 hover:text-[var(--accent)]"
-            >
-              Live Demo
-            </a>
-          </div>
-        </div>
-
-        {/* Project 3 */}
-        <div className="border border-[var(--border)] rounded-lg p-6">
-          <h3 className="text-lg font-medium">Authentication System</h3>
-
-          <p className="text-[var(--text-secondary)] mt-2 max-w-2xl">
-            Implemented a secure authentication system with JWT-based login,
-            protected routes, and role-based access control.
-          </p>
-
-          <div className="flex flex-wrap gap-2 mt-4">
-            <span
-              className="
-            px-2 py-1 text-xs
-            text-[var(--text-secondary)]
-            border border-[var(--border)]
-            rounded
-            transition
-            hover:text-[var(--text-primary)]
-            hover:border-[var(--accent)]
-            hover:shadow-[0_0_8px_rgba(255,255,255,0.15)]
-"
-            >
-              Node.js
-            </span>
-            <span
-              className="
-            px-2 py-1 text-xs
-            text-[var(--text-secondary)]
-            border border-[var(--border)]
-            rounded
-            transition
-            hover:text-[var(--text-primary)]
-            hover:border-[var(--accent)]
-            hover:shadow-[0_0_8px_rgba(255,255,255,0.15)]
-"
-            >
-              Express
-            </span>
-            <span
-              className="
-            px-2 py-1 text-xs
-            text-[var(--text-secondary)]
-            border border-[var(--border)]
-            rounded
-            transition
-            hover:text-[var(--text-primary)]
-            hover:border-[var(--accent)]
-            hover:shadow-[0_0_8px_rgba(255,255,255,0.15)]
-"
-            >
-              MongoDB
-            </span>
-            <span
-              className="
-            px-2 py-1 text-xs
-            text-[var(--text-secondary)]
-            border border-[var(--border)]
-            rounded
-            transition
-            hover:text-[var(--text-primary)]
-            hover:border-[var(--accent)]
-            hover:shadow-[0_0_8px_rgba(255,255,255,0.15)]
-"
-            >
-              JWT
-            </span>
-          </div>
-
-          <div className="flex gap-4 mt-4 text-sm">
-            <a
-              href="#"
-              className="underline underline-offset-4 hover:text-[var(--accent)]"
-            >
-              GitHub
-            </a>
-            <a
-              href="#"
-              className="underline underline-offset-4 hover:text-[var(--accent)]"
-            >
-              Live Demo
-            </a>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );
